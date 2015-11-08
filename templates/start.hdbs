@@ -1,7 +1,36 @@
 <div class="hellotext">
- <h1>Frank Richelieu</h1>
- <h2><strong>{{t "hello.main"}} {{username}}</strong></h2>
- <style>
+    <h1>Frank Richelieu</h1>
+    <h2><strong>{{t "hello.main"}} {{username}}</strong></h2>
+    <style>
+    select{
+        border-color: #527000 !important;
+        box-shadow: 0 0 3px #78A300 !important;
+        outline: thick none !important;
+        margin-top : -30px;
 
+    }
+    input[name=text]{
+        color : transparent;
+        border : none;
+        margin-left : 500px;
+    }
+    </style>
+    <script>
+
+     //console.log($("input[name=text]").hide());
+     if($("#custom_selector1")[0] == undefined)
+         $("input[name=text]").parent().append('<select id="custom_selector1" multiple>            <option value="volvo">Volvo</option>            <option value="saab">Saab</option>            <option value="opel">Opel</option>           <option value="audi">Audi</option>            </select>');
+
+     $('#custom_selector1').change(function() {
+         //console.log($("input[name=text]")[0]);
+         var text_val = $(this).find(":selected").map(function () {
+                 return $(this).text();
+             }).get().join(',');
+         $("#"+$("input[name=text]")[0].id).val(text_val);
+         $("#"+$("input[name=text]")[0].id).focus();
+         $("#custom_selector1").focus();
+     });
+
+    </script>
 
 </div>
