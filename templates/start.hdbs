@@ -1,0 +1,7 @@
+<div class="hellotext">
+ <h1>Frank Richelieu</h1>
+ <h2><strong>{{t "hello.main"}} {{username}}</strong></h2>
+ <style>
+
+
+</div>

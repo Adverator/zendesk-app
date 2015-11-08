@@ -1,0 +1,11 @@
+{
+  "name": "frank app",
+  "author": {
+    "name": "Frank",
+    "email": "franky0930@hotmail.com"
+  },
+  "defaultLocale": "en",
+  "private": true,
+  "location": "user_sidebar",
+  "frameworkVersion": "1.0"
+}
